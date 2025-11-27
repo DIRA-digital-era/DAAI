@@ -1,6 +1,6 @@
 # File: DAAI/services/embedding_generator.py
 # Wrapper utilities to produce image, text, and fused embeddings.
-# Now includes logging hooks for streaming reasoning steps.
+# Includes logging hooks for streaming reasoning steps.
 
 import numpy as np
 from .embedding_image import embed_image_from_bytes

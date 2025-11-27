@@ -6,16 +6,13 @@ import numpy as np
 from .embedding_image import embed_image_from_bytes
 from .embedding_text import embed_text
 
-# Default embedding dimensions
-IMAGE_EMB_DIM = 1024  # actual output dim of embed_image
-TEXT_EMB_DIM = 768    # actual output dim of embed_text
+IMAGE_EMB_DIM = 1024
+TEXT_EMB_DIM = 768
 FUSED_EMB_DIM = IMAGE_EMB_DIM + TEXT_EMB_DIM  # 1792
 
-# Optional step logger (callable) to stream intermediate logs
-STEP_LOGGER = None  # assign a callable like websocket_send(msg) in runtime
+STEP_LOGGER = None  # Optional callable to log intermediate steps
 
 def log_step(step_name: str, info: dict):
-    """Log an intermediate reasoning step."""
     if STEP_LOGGER:
         try:
             STEP_LOGGER({"step": step_name, "info": info})
@@ -33,29 +30,22 @@ def embed_text_metadata(text: str) -> np.ndarray:
     return vec
 
 def embed_full(image_bytes: bytes, metadata_text: str) -> np.ndarray:
-    """Generate fused embedding (image + text) with normalization."""
+    """
+    Generate fused embedding (image + text) with normalization.
+    Pre-allocates array to reduce temporary memory usage.
+    """
     log_step("start_fusion", {"image_bytes_len": len(image_bytes), "metadata_text_len": len(metadata_text)})
 
     image_vec = embed_image(image_bytes)
     text_vec = embed_text_metadata(metadata_text)
 
-    # Ensure concatenated vector has expected 1792 dim
-    combined_vec = np.concatenate([image_vec, text_vec])
-    if combined_vec.shape[0] != FUSED_EMB_DIM:
-        log_step("dimension_mismatch", {
-            "expected": FUSED_EMB_DIM,
-            "actual": combined_vec.shape[0]
-        })
-        # Pad or trim to 1792
-        if combined_vec.shape[0] < FUSED_EMB_DIM:
-            padding = np.zeros(FUSED_EMB_DIM - combined_vec.shape[0], dtype=np.float32)
-            combined_vec = np.concatenate([combined_vec, padding])
-        else:
-            combined_vec = combined_vec[:FUSED_EMB_DIM]
+    # Pre-allocate fused array
+    fused = np.empty(FUSED_EMB_DIM, dtype=np.float32)
+    fused[:image_vec.shape[0]] = image_vec
+    fused[IMAGE_EMB_DIM:] = text_vec
 
-    norm = np.linalg.norm(combined_vec) + 1e-12
-    fused_normed = combined_vec / norm
+    # Normalize
+    fused /= np.linalg.norm(fused) + 1e-12
 
-    log_step("fusion_complete", {"final_dim": fused_normed.shape[0], "norm": norm})
-
-    return fused_normed
+    log_step("fusion_complete", {"final_dim": fused.shape[0]})
+    return fused

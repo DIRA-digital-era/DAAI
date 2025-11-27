@@ -1,21 +1,39 @@
 # File: DAAI/services/embedding_text.py
+
 import numpy as np
 import torch
 from transformers import CLIPTokenizer, CLIPTextModel
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cpu"
+CLIP_TEXT_MODEL = "laion/CLIP-ViT-B-32-laion2B-s34B-b79K"
 
-CLIP_TEXT_MODEL = "openai/clip-vit-base-patch32"
-_tokenizer = CLIPTokenizer.from_pretrained(CLIP_TEXT_MODEL)
-_text_model = CLIPTextModel.from_pretrained(CLIP_TEXT_MODEL).to(device)
-_text_model.eval()
+# Lazy-loaded globals
+_tokenizer = None
+_text_model = None
+EMBEDDING_DIM = 768  # matches original CLIP
 
-EMBEDDING_DIM = getattr(_text_model.config, "hidden_size", 512)
+def _ensure_model_loaded():
+    """Lazy-load CLIP tokenizer and quantized model (CPU)."""
+    global _tokenizer, _text_model
+    if _tokenizer is None or _text_model is None:
+        _tokenizer = CLIPTokenizer.from_pretrained(CLIP_TEXT_MODEL)
+
+        # Load quantized 8-bit model for CPU
+        _text_model = CLIPTextModel.from_pretrained(
+            CLIP_TEXT_MODEL,
+            torch_dtype=torch.float32,
+            device_map="cpu",
+            load_in_8bit=True  # HuggingFace supports this on CPU now
+        )
+        _text_model.eval()
 
 def embed_text(text: str) -> np.ndarray:
-    inputs = _tokenizer([text], return_tensors="pt", padding=True, truncation=True).to(device)
+    """Generate L2-normalized text embedding (CPU, 8-bit quantized)."""
+    _ensure_model_loaded()
+    inputs = _tokenizer([text], return_tensors="pt", padding=True, truncation=True)
+
     with torch.no_grad():
-        feats = _text_model(**inputs).last_hidden_state[:,0,:]
+        feats = _text_model(**inputs).last_hidden_state[:, 0, :]  # CLS token
     arr = feats.cpu().numpy()[0].astype(np.float32)
-    norm = np.linalg.norm(arr) + 1e-12
-    return arr / norm
+    arr /= np.linalg.norm(arr) + 1e-12
+    return arr

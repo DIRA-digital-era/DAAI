@@ -1,4 +1,4 @@
-#DAAI/services/embedding_image.py
+# File: DAAI/services/embedding_image.py
 import io
 from PIL import Image
 import numpy as np
@@ -7,17 +7,15 @@ import torch.nn as nn
 from torchvision import transforms
 from torchvision.models import efficientnet_b1, EfficientNet_B1_Weights
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+# CPU-only
+device = "cpu"
 
-# Load EfficientNet-B1 (ImageNet weights)
-weights = EfficientNet_B1_Weights.IMAGENET1K_V1
-_model = efficientnet_b1(weights=weights).to(device)
-_model.eval()
-_model.classifier = nn.Identity()
+# Lazy-loaded, quantized model
+_model = None
 
-EMBEDDING_DIM = 1280  # B1 output
+EMBEDDING_DIM = 1280  # EfficientNet-B1 output
 
-# Hard-coded ImageNet normalization
+# ImageNet normalization
 IMAGENET_MEAN = [0.485, 0.456, 0.406]
 IMAGENET_STD = [0.229, 0.224, 0.225]
 
@@ -27,14 +25,30 @@ _preprocess = transforms.Compose([
     transforms.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD),
 ])
 
+def _ensure_model_loaded():
+    """Load EfficientNet-B1 only on first use (CPU) and apply dynamic quantization."""
+    global _model
+    if _model is None:
+        weights = EfficientNet_B1_Weights.IMAGENET1K_V1
+        model = efficientnet_b1(weights=weights)
+        model.classifier = nn.Identity()
+        model.eval()
+        # Quantize model for CPU
+        _model = torch.quantization.quantize_dynamic(
+            model, {nn.Linear}, dtype=torch.qint8
+        )
+
 def preprocess_image_bytes(image_bytes: bytes) -> torch.Tensor:
+    """Convert raw bytes to normalized tensor."""
     img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-    return _preprocess(img).unsqueeze(0).to(device)
+    return _preprocess(img).unsqueeze(0)
 
 def embed_image_from_bytes(image_bytes: bytes) -> np.ndarray:
+    """Generate L2-normalized image embedding."""
+    _ensure_model_loaded()
     x = preprocess_image_bytes(image_bytes)
     with torch.no_grad():
         feats = _model(x)
-    arr = feats.cpu().numpy()[0].astype(np.float32)
-    norm = np.linalg.norm(arr) + 1e-12
-    return arr / norm
+    arr = feats.numpy()[0].astype(np.float32)
+    arr /= np.linalg.norm(arr) + 1e-12
+    return arr

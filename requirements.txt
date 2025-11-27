@@ -1,10 +1,12 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 numpy>=1.24.0
-torch>=2.1.0
+torch==2.3.0+cpu
 transformers>=4.35.0
 flask>=2.3.2
 flask-cors>=3.0.10
 psycopg2-binary>=2.9.9
 redis>=5.0.0
 Pillow>=10.0.0
-uuid
-logging
+python-dotenv>=1.0.0
+uvicorn>=0.23.0

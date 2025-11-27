@@ -1,0 +1,647 @@
+{
+  "Apple scab": {
+    "canonical_name": "Venturia inaequalis (Apple scab)",
+    "common_names": ["Apple scab", "Scab"],
+    "description": "Fungal disease causing olive-green to brown velvety spots on apple leaves and fruit; reduces fruit marketability and can cause early leaf drop.",
+    "visual_cues": ["Olive-green velvety lesions on leaves", "Dark scabby lesions on fruit", "Premature leaf yellowing and drop"],
+    "likely_cause": "Fungal (Venturia inaequalis)",
+    "remedies": [
+      "Remove and destroy fallen infected leaves in autumn.",
+      "Apply registered fungicide at green tip and petal-fall according to local extension guidance.",
+      "Use resistant cultivars and promote air flow (prune, proper spacing)."
+    ],
+    "severity": "medium",
+    "confidence_notes": "Visual diagnosis reliable when lesions are classic; confirm with temporal history (wet spring).",
+    "sources": ["university_extension"]
+  },
+
+  "Bacterial spot": {
+    "canonical_name": "Xanthomonas spp. (Bacterial spot)",
+    "common_names": ["Bacterial spot"],
+    "description": "Bacterial disease on tomato/pepper causing small dark lesions on leaves and fruit, often with halo; favoured by warm, wet conditions.",
+    "visual_cues": ["Small water-soaked spots on leaves", "Necrotic lesions on fruit with chlorotic halo", "Leaf drop in severe cases"],
+    "likely_cause": "Bacterial (Xanthomonas spp.)",
+    "remedies": [
+      "Avoid overhead irrigation; use drip irrigation and improve canopy ventilation.",
+      "Remove and destroy severely infected plants/fruit.",
+      "Use certified disease-free seed/stock and copper-based sprays where recommended (rotate products)."
+    ],
+    "severity": "high",
+    "confidence_notes": "Bacterial vs fungal can be confused visually; lab confirmation recommended for ambiguous cases.",
+    "sources": ["university_extension"]
+  },
+
+  "Black rot (Grape)": {
+    "canonical_name": "Guignardia bidwellii (Black rot)",
+    "common_names": ["Black rot"],
+    "description": "Fungal disease of grape producing round dark lesions on leaves and black shriveled berries; spreads rapidly in warm wet seasons.",
+    "visual_cues": ["Round brown lesions on leaves", "Black, shriveled fruit", "Fruit mummification on cluster"],
+    "likely_cause": "Fungal (Guignardia bidwellii)",
+    "remedies": [
+      "Prune out and destroy mummified berries and highly infected tissue.",
+      "Apply protectant fungicides on schedule during susceptible periods.",
+      "Maintain air circulation and reduce humidity in the canopy."
+    ],
+    "severity": "high",
+    "confidence_notes": "Distinct fruit mummification helps identification; consider lab confirmation if unclear.",
+    "sources": ["university_extension"]
+  },
+
+  "Cedar apple rust": {
+    "canonical_name": "Gymnosporangium juniperi-virginianae (Cedar-apple rust)",
+    "common_names": ["Cedar apple rust", "Gymnosporangium rust"],
+    "description": "Rust fungus with a two-host life cycle (juniper and apple/pear) causing bright orange gelatinous lesions on leaves and deformities.",
+    "visual_cues": ["Bright orange gelatinous spore horns on leaves (spring)", "Yellow to orange lesions with red borders", "Galls on juniper hosts"],
+    "likely_cause": "Fungal (Gymnosporangium spp.) with alternate juniper host",
+    "remedies": [
+      "Remove nearby junipers if practical or remove galls from junipers.",
+      "Apply fungicides at key apple phenology stages if orchard history indicates rust.",
+      "Plant resistant cultivars where available."
+    ],
+    "severity": "low",
+    "confidence_notes": "Visible orange spore horns in spring are diagnostic.",
+    "sources": ["university_extension"]
+  },
+
+  "Gray leaf spot (Cercospora) / Cercospora leaf spot": {
+    "canonical_name": "Cercospora spp. (Gray leaf spot)",
+    "common_names": ["Gray leaf spot", "Cercospora leaf spot"],
+    "description": "Fungal disease causing rectangular tan/gray lesions on grass/corn leaves; reduces photosynthetic area and yield under heavy pressure.",
+    "visual_cues": ["Rectangular tan/gray lesions between veins", "Lesions elongate and coalesce", "Leaf necrosis in severe infections"],
+    "likely_cause": "Fungal (Cercospora spp.)",
+    "remedies": [
+      "Rotate crops and bury infected residue where feasible.",
+      "Apply fungicides at recommended growth stages for high risk fields.",
+      "Use resistant hybrids and manage nitrogen levels and canopy density."
+    ],
+    "severity": "medium",
+    "confidence_notes": "Typical rectangular lesions on corn are reliable visual cue.",
+    "sources": ["university_extension"]
+  },
+
+  "Common rust (Corn)": {
+    "canonical_name": "Puccinia sorghi (Common rust of corn)",
+    "common_names": ["Common rust"],
+    "description": "Rust disease of corn producing orange-brown pustules on leaves, more common in cooler, moist conditions.",
+    "visual_cues": ["Orange to brown pustules scattered on leaf surface", "Pustules release urediniospores when rubbed"],
+    "likely_cause": "Fungal (Puccinia spp.)",
+    "remedies": [
+      "Plant resistant hybrids where available.",
+      "Manage field conditions to reduce prolonged leaf wetness.",
+      "Fungicide in severe outbreaks on susceptible varieties."
+    ],
+    "severity": "low",
+    "confidence_notes": "Pustules are diagnostic; distinguish from southern rust by pustule color/location and timing.",
+    "sources": ["university_extension"]
+  },
+
+  "Early blight": {
+    "canonical_name": "Alternaria solani (Early blight)",
+    "common_names": ["Early blight"],
+    "description": "Fungal disease in tomato/potato producing concentric 'target' lesions on leaves and fruit; worsens with age and poor sanitation.",
+    "visual_cues": ["Concentric ringed lesions (target-like) on leaves and stems", "Fruit lesions dark with target pattern", "Progressive defoliation"],
+    "likely_cause": "Fungal (Alternaria solani)",
+    "remedies": [
+      "Remove infected debris and volunteer plants.",
+      "Use crop rotation and resistant varieties when possible.",
+      "Apply protective/curative fungicides based on disease pressure."
+    ],
+    "severity": "medium",
+    "confidence_notes": "Concentric ringed lesions are classic and reliable.",
+    "sources": ["university_extension"]
+  },
+
+  "Esca (Black measles)": {
+    "canonical_name": "Esca complex (multiple fungi)",
+    "common_names": ["Esca", "Black measles", "Grapevine trunk disease"],
+    "description": "Complex of grapevine trunk diseases causing wood decay, foliar tiger-stripe symptoms and shriveled dark berries.",
+    "visual_cues": ["Tiger-striped foliar discoloration", "Blackened 'measles' on berries", "Wood necrosis in trunk/cordon"],
+    "likely_cause": "Fungal complex (multiple wood-decay fungi)",
+    "remedies": [
+      "Remove and replace severely affected vines; prune out dead wood.",
+      "Improve sanitation and wound protection practices.",
+      "There are no simple curative sprays; manage planting material and pruning hygiene."
+    ],
+    "severity": "high",
+    "confidence_notes": "Diagnosis may require wood inspection or specialist confirmation.",
+    "sources": ["university_extension"]
+  },
+
+  "Huanglongbing (Citrus greening)": {
+    "canonical_name": "Huanglongbing (HLB) / Citrus greening",
+    "common_names": ["Citrus greening", "HLB"],
+    "description": "Serious bacterial disease of citrus caused by Candidatus Liberibacter species, vectored by psyllids; causes yellow shoots, blotchy mottling and bitter fruit; often fatal.",
+    "visual_cues": ["Asymmetric leaf yellowing (blotchy mottle)", "Small, misshapen bitter fruit", "Overall decline and twig dieback"],
+    "likely_cause": "Bacterial (Candidatus Liberibacter spp.) transmitted by Asian citrus psyllid",
+    "remedies": [
+      "Remove infected trees and control psyllid vectors aggressively.",
+      "Plant certified disease-free nursery stock and follow integrated pest management.",
+      "There is currently no cure; management focuses on containment and vector control."
+    ],
+    "severity": "very_high",
+    "confidence_notes": "Requires lab testing for confirmation; symptoms overlap with nutrient deficiency but are asymmetric.",
+    "sources": ["usda_extension"]
+  },
+
+  "Late blight": {
+    "canonical_name": "Phytophthora infestans (Late blight)",
+    "common_names": ["Late blight"],
+    "description": "Rapid, destructive disease of potato and tomato causing water-soaked lesions and gray mold; favored by cool, wet weather.",
+    "visual_cues": ["Water-soaked lesions on leaves/stems", "White fuzzy sporulation in humid conditions", "Dark, greasy lesions on tubers/fruit"],
+    "likely_cause": "Oomycete (Phytophthora infestans)",
+    "remedies": [
+      "Remove and destroy infected plants promptly.",
+      "Apply recommended fungicides protectively in cool, wet conditions.",
+      "Use certified seed potatoes and follow sanitation practices."
+    ],
+    "severity": "very_high",
+    "confidence_notes": "Rapid spread and classic sporulation help diagnosis; lab confirmation recommended for high stakes.",
+    "sources": ["usda_extension"]
+  },
+
+  "Leaf mold (tomato)": {
+    "canonical_name": "Fulvia fulva (formerly Cladosporium fulvum) - leaf mold",
+    "common_names": ["Leaf mold"],
+    "description": "Fungal disease on tomato causing yellow patches on upper leaf surface and olive-green growth on the underside; thrives in high humidity.",
+    "visual_cues": ["Yellow patches upper surface", "Olive-green fuzzy growth on underside", "Leaf curling and defoliation in severe cases"],
+    "likely_cause": "Fungal (Fulvia fulva/Cladosporium spp.)",
+    "remedies": [
+      "Reduce greenhouse humidity and improve ventilation.",
+      "Remove infected leaves and avoid overhead watering.",
+      "Use resistant cultivars where available."
+    ],
+    "severity": "medium",
+    "confidence_notes": "Under greenhouse conditions this is common and fairly diagnostic.",
+    "sources": ["university_extension"]
+  },
+
+  "Leaf blight (Isariopsis / Grape leaf blight)": {
+    "canonical_name": "Isariopsis vitis / leaf blight complex",
+    "common_names": ["Isariopsis leaf spot", "Leaf blight"],
+    "description": "Fungal-like leaf lesions on grape characterized by necrotic spots that may coalesce and cause defoliation.",
+    "visual_cues": ["Small necrotic spots that expand and coalesce", "Premature leaf drop", "Lesions often dark with yellow halo"],
+    "likely_cause": "Fungal (Isariopsis spp. and others)",
+    "remedies": [
+      "Sanitation of infected debris and pruning to improve airflow.",
+      "Fungicide sprays according to local recommendations during wet seasons."
+    ],
+    "severity": "medium",
+    "confidence_notes": "Visual diagnosis can be aided by local disease history.",
+    "sources": ["university_extension"]
+  },
+
+  "Leaf scorch (Strawberry/others)": {
+    "canonical_name": "Leaf scorch (various causes)",
+    "common_names": ["Leaf scorch"],
+    "description": "General symptom of marginal leaf browning and necrosis; can be due to fungal, bacterial, or abiotic stress (heat, salts, water stress).",
+    "visual_cues": ["Brown margins or tips", "Sharp demarcation between healthy and burned tissue", "Often starts at leaf edges and moves inward"],
+    "likely_cause": "Abiotic stress or pathogen depending on context",
+    "remedies": [
+      "Check irrigation and soil salinity; adjust watering.",
+      "If pathogen suspected, collect samples and consult extension for testing.",
+      "Improve canopy microclimate and nutrition to reduce stress."
+    ],
+    "severity": "variable",
+    "confidence_notes": "Leaf scorch is a symptom, not a single disease; treat underlying cause.",
+    "sources": ["university_extension"]
+  },
+
+  "Northern leaf blight": {
+    "canonical_name": "Exserohilum turcicum (Northern corn leaf blight)",
+    "common_names": ["Northern leaf blight"],
+    "description": "Fungal disease producing cigar-shaped lesions on corn leaves; reduces photosynthetic area and yield.",
+    "visual_cues": ["Long cigar-shaped tan lesions parallel to leaf veins", "Lesions may coalesce under heavy infection"],
+    "likely_cause": "Fungal (Exserohilum turcicum)",
+    "remedies": [
+      "Plant resistant hybrids and rotate crops.",
+      "Use timely fungicide applications for susceptible hybrids under high disease pressure."
+    ],
+    "severity": "medium",
+    "confidence_notes": "Lesion shape makes this one relatively easy to identify visually.",
+    "sources": ["university_extension"]
+  },
+
+  "Powdery mildew": {
+    "canonical_name": "Powdery mildew (various Erysiphales species)",
+    "common_names": ["Powdery mildew"],
+    "description": "Surface fungal growth appearing as white powdery patches on leaves, stems and fruit; common across many crops.",
+    "visual_cues": ["White dusty coating on leaf surfaces", "Distorted growth and chlorosis near colonies"],
+    "likely_cause": "Fungal (Erysiphales family — species vary by crop)",
+    "remedies": [
+      "Use resistant varieties where available.",
+      "Apply foliar fungicides and improve airflow.",
+      "Avoid excessive nitrogen that promotes dense foliage."
+    ],
+    "severity": "low_to_medium",
+    "confidence_notes": "Distinct white powdery growth is diagnostic.",
+    "sources": ["university_extension"]
+  },
+
+  "Septoria leaf spot": {
+    "canonical_name": "Septoria lycopersici (Septoria leaf spot)",
+    "common_names": ["Septoria leaf spot"],
+    "description": "Fungal disease of tomato causing small circular spots with dark borders and gray centers, leading to defoliation in severe cases.",
+    "visual_cues": ["Many small circular spots with dark border and pale center", "Starts on lower leaves and moves up canopy"],
+    "likely_cause": "Fungal (Septoria spp.)",
+    "remedies": [
+      "Remove lower infected leaves, improve spacing and ventilation.",
+      "Rotate crops and avoid wet foliage; use fungicides if severe."
+    ],
+    "severity": "medium",
+    "confidence_notes": "Distinct spot pattern helps diagnosis.",
+    "sources": ["university_extension"]
+  },
+
+  "Spider mites (Two-spotted spider mite)": {
+    "canonical_name": "Tetranychus urticae (Two-spotted spider mite)",
+    "common_names": ["Two-spotted spider mite", "Spider mites"],
+    "description": "Sap-sucking mite causing stippling, webbing and bronzing of leaves; favored by hot, dry conditions.",
+    "visual_cues": ["Fine stippling on leaves", "Bronzing and leaf drop", "Fine webbing on underside in heavy infestations"],
+    "likely_cause": "Arthropod pest (mite)",
+    "remedies": [
+      "Use predatory mites or biological controls where feasible.",
+      "Avoid high dust and hot dry stress; use proper irrigation.",
+      "Apply miticides only when thresholds exceeded and rotate modes of action."
+    ],
+    "severity": "medium",
+    "confidence_notes": "Look for webbing and mobile mites on underside of leaves for confirmation.",
+    "sources": ["university_extension"]
+  },
+
+  "Target Spot": {
+    "canonical_name": "Corynespora cassiicola (Target spot) / related pathogens",
+    "common_names": ["Target spot"],
+    "description": "Foliar disease producing round to target-shaped lesions; affects a range of crops under warm, humid conditions.",
+    "visual_cues": ["Circular or target-shaped brown lesions", "Lesions may coalesce and cause defoliation"],
+    "likely_cause": "Fungal (Corynespora and others)",
+    "remedies": [
+      "Improve airflow and reduce leaf wetness.",
+      "Remove infected debris; apply fungicides if recommended for the crop."
+    ],
+    "severity": "variable",
+    "confidence_notes": "Target shape is clue but species differ by crop; verify with local extension.",
+    "sources": ["university_extension"]
+  },
+
+  "Tomato Yellow Leaf Curl Virus (TYLCV)": {
+    "canonical_name": "Tomato yellow leaf curl virus (TYLCV)",
+    "common_names": ["Tomato yellow leaf curl virus"],
+    "description": "Begomovirus transmitted by whiteflies causing leaf curling, yellowing and severe yield loss in tomato.",
+    "visual_cues": ["Severe leaf curling and yellowing", "Stunted plants, small fruit", "Whitefly presence often observed"],
+    "likely_cause": "Viral (Begomovirus), vectored by whitefly",
+    "remedies": [
+      "Use resistant varieties where available and control whitefly vectors.",
+      "Remove infected plants promptly to reduce spread.",
+      "Use reflective mulches and insect-proof screens in high-value production."
+    ],
+    "severity": "very_high",
+    "confidence_notes": "Requires vector and symptom correlation; lab test confirms.",
+    "sources": ["university_extension"]
+  },
+
+  "Tomato mosaic virus": {
+    "canonical_name": "Tomato mosaic virus (ToMV) / related tobamoviruses",
+    "common_names": ["Tomato mosaic virus", "Tobamovirus"],
+    "description": "Stable virus causing mottling, leaf distortion and reduced yields; spreads mechanically and via seed in some cases.",
+    "visual_cues": ["Mottled leaves, mosaic patterns", "Leaf curling and stunting", "Irregular fruit ripening"],
+    "likely_cause": "Viral (Tobamovirus), mechanical/seed transmission",
+    "remedies": [
+      "Remove and destroy infected plants; sanitize tools and hands.",
+      "Use certified virus-free seed and resistant cultivars where available."
+    ],
+    "severity": "medium_to_high",
+    "confidence_notes": "Lab confirmation recommended; strict sanitation is key.",
+    "sources": ["university_extension"]
+  }, 
+
+  "Cassava mosaic disease": {
+    "common_names": ["CMD"],
+    "description": "Viral disease causing deformation, leaf mosaic patterns, stunting and major yield loss in cassava.",
+    "visual_cues": ["Green-yellow mosaic patterns", "Misshapen leaves", "Severe stunting", "Sparse canopy"],
+    "likely_cause": "Cassava mosaic begomoviruses transmitted primarily by whiteflies and infected cuttings.",
+    "remedies": ["Use certified clean stem cuttings", "Destroy infected plants", "Use resistant varieties like TME series", "Control whiteflies when feasible"],
+    "severity": "critical",
+    "confidence_notes": "Very common in sub-Saharan Africa; mosaic pattern + stunting is highly indicative."
+  },
+
+  "Cassava brown streak disease": {
+    "common_names": ["CBSD"],
+    "description": "Virus disease causing brown necrotic rot inside cassava roots and leaf chlorosis.",
+    "visual_cues": ["Yellow mottling along leaf veins", "Brown streaks on stems", "Corky brown rot in tubers"],
+    "likely_cause": "Ipomovirus transmitted mainly by whiteflies and infected planting material.",
+    "remedies": ["Use virus-free planting material", "Grow resistant varieties (e.g. NAROCASS)", "Remove symptomatic plants", "Manage whiteflies"],
+    "severity": "critical",
+    "confidence_notes": "Root necrosis upon cutting tubers is the strongest indicator."
+  },
+
+  "Maize lethal necrosis": {
+    "common_names": ["MLN"],
+    "description": "Synergistic viral infection causing severe chlorosis, stunting and near-total crop failure.",
+    "visual_cues": ["Chlorotic streaking on leaves", "Dead heart in young maize", "Drying of leaf edges"],
+    "likely_cause": "Maize chlorotic mottle virus + another potyvirus, spread by insects.",
+    "remedies": ["Plant virus-free seed", "Remove volunteer maize and grasses", "Control insect vectors", "Use MLN-tolerant hybrids"],
+    "severity": "critical",
+    "confidence_notes": "Distinct sudden leaf necrosis + stunting; common in East Africa outbreaks."
+  },
+
+  "Banana Xanthomonas wilt": {
+    "common_names": ["BXW"],
+    "description": "Bacterial wilt devastating banana and plantain in East/Central Africa.",
+    "visual_cues": ["Yellowing and wilting", "Premature fruit ripening", "Milky bacterial ooze from cut stem"],
+    "likely_cause": "Xanthomonas campestris pv. musacearum bacteria spread by tools, insects and infected material.",
+    "remedies": ["Disinfect tools with bleach", "Remove male buds early", "Rogue infected mats", "Use clean planting materials"],
+    "severity": "critical",
+    "confidence_notes": "Bacterial ooze and premature fruit ripening are classic signs."
+  },
+
+  "Bean rust": {
+    "common_names": ["rust of beans"],
+    "description": "Fungal rust infection affecting common beans, causing leaf pustules and early defoliation.",
+    "visual_cues": ["Orange-brown raised pustules", "Leaf yellowing", "Premature leaf drop"],
+    "likely_cause": "Uromyces appendiculatus fungus favored by humid conditions.",
+    "remedies": ["Use resistant varieties", "Apply targeted fungicides", "Ensure spacing and airflow", "Remove infected debris"],
+    "severity": "medium",
+    "confidence_notes": "Pustules make diagnosis straightforward."
+  },
+
+  "Bean common mosaic virus": {
+    "common_names": ["BCMV"],
+    "description": "Viral disease leading to mosaic patterns, leaf malformation and reduced yield.",
+    "visual_cues": ["Mosaic mottling", "Downward leaf rolling", "Distorted leaves"],
+    "likely_cause": "Potyvirus transmitted by aphids and infected seeds.",
+    "remedies": ["Use virus-free seeds", "Remove symptomatic plants", "Control aphids", "Grow resistant cultivars"],
+    "severity": "high",
+    "confidence_notes": "Mosaic with leaf deformation is typical."
+  },
+
+  "Groundnut rosette disease": {
+    "common_names": ["groundnut rosette"],
+    "description": "A virus complex causing stunting, mottling and severe yield loss in groundnuts.",
+    "visual_cues": ["Green or yellow mottling", "Stunting", "Bushy appearance"],
+    "likely_cause": "GRAV + satRNA transmitted by aphids.",
+    "remedies": ["Use resistant groundnut varieties", "Early planting", "Control aphids when possible"],
+    "severity": "critical",
+    "confidence_notes": "Very common in West Africa; symptoms well understood."
+  },
+
+  "Sorghum anthracnose": {
+    "common_names": ["anthracnose"],
+    "description": "Fungal disease forming leaf lesions and stalk rot in sorghum.",
+    "visual_cues": ["Circular red lesions", "Center turns tan", "Leaf blight"],
+    "likely_cause": "Colletotrichum sublineolum fungus.",
+    "remedies": ["Plant resistant hybrids", "Rotate crops", "Eliminate crop residue", "Use fungicides when feasible"],
+    "severity": "high",
+    "confidence_notes": "Red margins around lesions are typical."
+  },
+
+  "Rice blast": {
+    "common_names": ["leaf blast", "neck blast"],
+    "description": "One of the most destructive rice fungal diseases globally.",
+    "visual_cues": ["Diamond-shaped lesions", "Neck rot", "Singed leaf tips"],
+    "likely_cause": "Magnaporthe oryzae fungus under humid conditions.",
+    "remedies": ["Use resistant varieties", "Balanced N fertilizer", "Improve airflow", "Apply fungicide if needed"],
+    "severity": "critical",
+    "confidence_notes": "Diamond lesions are iconic."
+  },
+
+  "Rice bacterial leaf blight": {
+    "common_names": ["BLB"],
+    "description": "Bacterial disease causing yellowing, leaf blight and yield loss in rice.",
+    "visual_cues": ["Yellow stripes from leaf tips downward", "Water-soaked edges", "Leaf drying"],
+    "likely_cause": "Xanthomonas oryzae pv. oryzae spread by rain and irrigation.",
+    "remedies": ["Use resistant rice varieties", "Apply proper spacing", "Use clean water sources"],
+    "severity": "high",
+    "confidence_notes": "Tip-to-base yellowing is distinctive."
+  },
+
+  "Tea mosquito bug damage": {
+    "common_names": ["Helopeltis damage"],
+    "description": "Serious pest of cashew, cocoa and tea in West Africa.",
+    "visual_cues": ["Brown circular necrotic spots", "Dieback of shoots", "Lesions on young nuts"],
+    "likely_cause": "Helopeltis spp. feeding.",
+    "remedies": ["Remove infested shoots", "Use selective insecticides", "Prune regularly"],
+    "severity": "high",
+    "confidence_notes": "Feeding spots with halos are unique."
+  },
+
+  "Cowpea aphid-borne mosaic virus": {
+    "common_names": ["CABMV"],
+    "description": "Virus infecting cowpea, passionfruit and legumes.",
+    "visual_cues": ["Severe mosaic", "Shoots distortion", "Stunting"],
+    "likely_cause": "Potyvirus spread by aphids.",
+    "remedies": ["Use resistant seeds", "Rogue infected plants", "Control aphids"],
+    "severity": "high",
+    "confidence_notes": "Mosaic + distortion confirms diagnosis."
+  },
+
+  "Okra leaf curl disease": {
+    "common_names": ["OLCV"],
+    "description": "Whitefly-transmitted virus causing curling and stunted okra.",
+    "visual_cues": ["Upward curling leaves", "Thickened veins", "Stunted plants"],
+    "likely_cause": "Begomovirus via Bemisia whiteflies.",
+    "remedies": ["Use resistant varieties", "Control whiteflies", "Remove infected plants"],
+    "severity": "high",
+    "confidence_notes": "Curl + vein thickening is characteristic."
+  },
+
+  "Sweet potato weevil damage": {
+    "common_names": ["SPW"],
+    "description": "Infestation causing root tunneling and leaf wilting in sweet potato.",
+    "visual_cues": ["Tunnels in storage roots", "Cracks on root surface", "Wilting vines"],
+    "likely_cause": "Cylas spp. weevils.",
+    "remedies": ["Use clean planting vines", "Hill soil to cover roots", "Harvest early", "Use traps"],
+    "severity": "high",
+    "confidence_notes": "Root tunneling identifies it decisively."
+  },
+
+  "Sweet potato feathery mottle virus": {
+    "common_names": ["SPFMV"],
+    "description": "Virus causing leaf mottling and reduced tuber yield.",
+    "visual_cues": ["Feathery purple mottling", "Distorted leaves", "Reduced canopy"],
+    "likely_cause": "Potyvirus spread by aphids and infected vines.",
+    "remedies": ["Use virus-free planting material", "Remove infected vines", "Control aphids"],
+    "severity": "medium",
+    "confidence_notes": "Feathery mottling differentiates from nutrient stress."
+  },
+
+  "Plantain black sigatoka": {
+    "common_names": ["black leaf streak"],
+    "description": "Fungus reducing photosynthesis in plantain and banana.",
+    "visual_cues": ["Dark streaks on leaves", "Necrotic patches", "Reduced leaf area"],
+    "likely_cause": "Mycosphaerella fijiensis fungus.",
+    "remedies": ["Sanitation", "Use tolerant cultivars", "Apply fungicides if possible"],
+    "severity": "critical",
+    "confidence_notes": "Black streaking patterns are diagnostic."
+  },
+
+  "Pear leaf blister mite": {
+    "common_names": ["eriophyid mite damage"],
+    "description": "Tiny mites causing blistering and deformation of pear leaves.",
+    "visual_cues": ["Raised reddish blisters", "Leaf distortion"],
+    "likely_cause": "Eriophyid mites.",
+    "remedies": ["Dormant oil sprays", "Remove infested leaves"],
+    "severity": "low",
+    "confidence_notes": "Blistering makes this easy to identify."
+  },
+
+  "Cotton bollworm damage": {
+    "common_names": ["Helicoverpa"],
+    "description": "Major defoliator and fruit borer of cotton and many crops.",
+    "visual_cues": ["Holes in bolls", "Defoliation", "Frass around feeding sites"],
+    "likely_cause": "Helicoverpa armigera larvae.",
+    "remedies": ["Use pheromone traps", "Biocontrol agents", "Selective insecticides"],
+    "severity": "high",
+    "confidence_notes": "Feeding holes + frass obvious indicators."
+  },
+
+  "Citrus leaf miner damage": {
+    "common_names": ["leaf miner"],
+    "description": "Miner larvae create serpentine tunnels in citrus leaves.",
+    "visual_cues": ["Silvery winding mines", "Distorted young leaves"],
+    "likely_cause": "Phyllocnistis citrella larvae.",
+    "remedies": ["Prune infested shoots", "Apply neem or selective insecticides"],
+    "severity": "low",
+    "confidence_notes": "Serpentine mines are unmistakable."
+  },
+
+  "Pear scab": {
+    "common_names": ["scab"],
+    "description": "Fungal leaf and fruit disease similar to apple scab but specific to pear.",
+    "visual_cues": ["Velvety dark spots on fruit", "Leaf lesions"],
+    "likely_cause": "Venturia pyrina fungus.",
+    "remedies": ["Sanitation", "Fungicides", "Resistant varieties"],
+    "severity": "medium",
+    "confidence_notes": "Lesions resemble apple scab but host-specific."
+  },
+
+  "Mango anthracnose": {
+    "common_names": [],
+    "description": "Fungal disease causing fruit rot and leaf spots on mango.",
+    "visual_cues": ["Black sunken spots on fruit", "Leaf blight", "Flower infection"],
+    "likely_cause": "Colletotrichum gloeosporioides.",
+    "remedies": ["Prune canopy", "Copper sprays", "Postharvest hot-water treatment"],
+    "severity": "high",
+    "confidence_notes": "Black sunken fruit spots are distinctive."
+  },
+
+  "Mango mealybug": {
+    "common_names": [],
+    "description": "Sap-sucking pest causing sooty mold and fruit drop on mango.",
+    "visual_cues": ["White cottony masses", "Honeydew", "Ant activity"],
+    "likely_cause": "Rastrococcus spp.",
+    "remedies": ["Control ants", "Use oils/soaps", "Introduce predators"],
+    "severity": "medium",
+    "confidence_notes": "White cottony clusters confirm mealybug."
+  },
+
+  "Avocado root rot": {
+    "common_names": ["Phytophthora root rot"],
+    "description": "Soil-borne rot causing wilting and root decay in avocado.",
+    "visual_cues": ["Wilting", "Brown brittle roots", "Leaf drop"],
+    "likely_cause": "Phytophthora cinnamomi.",
+    "remedies": ["Improve drainage", "Use resistant rootstocks", "Avoid waterlogging"],
+    "severity": "high",
+    "confidence_notes": "Root examination is key for confirmation."
+  },
+
+  "Pigeon pea sterility mosaic disease": {
+    "common_names": ["SMD"],
+    "description": "Major pigeon pea viral disease causing sterile plants with pale leaves.",
+    "visual_cues": ["Bushy pale plants", "No flowering", "Leaf mosaic"],
+    "likely_cause": "SMD virus complex transmitted by mites.",
+    "remedies": ["Use resistant varieties", "Rogue infected plants", "Control mites"],
+    "severity": "high",
+    "confidence_notes": "Flower sterility differentiates it sharply."
+  },
+
+  "Millet downy mildew": {
+    "common_names": ["green ear"],
+    "description": "Oomycete disease affecting pearl millet.",
+    "visual_cues": ["Downy growth underside leaves", "Green ear formation", "Stunting"],
+    "likely_cause": "Sclerospora graminicola.",
+    "remedies": ["Treat seed", "Use resistant varieties", "Remove infected plants"],
+    "severity": "high",
+    "confidence_notes": "Green ear symptom is highly specific."
+  },
+
+  "Sun scorch / heat stress": {
+    "common_names": ["sunburn"],
+    "description": "High-temperature stress causing leaf burn and fruit sunscald.",
+    "visual_cues": ["Bleached leaf patches", "Scalded fruit skin", "Wilting"],
+    "likely_cause": "Excessive heat and direct radiation.",
+    "remedies": ["Provide shade", "Mulching", "Maintain adequate water"],
+    "severity": "medium",
+    "confidence_notes": "Field conditions usually confirm diagnosis."
+  },
+
+  "Wind damage": {
+    "common_names": [],
+    "description": "Physical stress due to high winds causing leaf shredding and lodging.",
+    "visual_cues": ["Torn leaves", "Bent stems", "Broken branches"],
+    "likely_cause": "High wind events during storms.",
+    "remedies": ["Provide windbreaks", "Stake plants", "Prune weak branches"],
+    "severity": "low",
+    "confidence_notes": "Physical tearing confirms non-biological cause."
+  },
+
+  "Iron deficiency chlorosis": {
+    "common_names": ["Fe deficiency"],
+    "description": "Nutrient disorder causing interveinal chlorosis on young leaves.",
+    "visual_cues": ["Yellowing between veins", "Veins remain green", "Young leaves most affected"],
+    "likely_cause": "High pH soil limiting Fe availability.",
+    "remedies": ["Apply iron chelates", "Lower soil pH", "Improve organic matter"],
+    "severity": "low",
+    "confidence_notes": "Confused with Mg deficiency, but Fe hits young leaves first."
+  },
+
+  "Magnesium deficiency": {
+    "common_names": ["Mg deficiency"],
+    "description": "Nutrient shortage causing interveinal yellowing of older leaves.",
+    "visual_cues": ["Interveinal chlorosis on older leaves", "Leaf curling"],
+    "likely_cause": "Low Mg in soil, high K competition.",
+    "remedies": ["Apply Mg fertilizer", "Balance NPK inputs"],
+    "severity": "low",
+    "confidence_notes": "Age of affected leaf differentiates from Fe deficiency."
+  },
+
+  "Phosphorus deficiency": {
+    "common_names": ["P deficiency"],
+    "description": "Stunted, purplish plants due to low phosphorus.",
+    "visual_cues": ["Purple leaf tinge", "Stunting", "Slow root growth"],
+    "likely_cause": "Low soil P or cold soils.",
+    "remedies": ["Apply P fertilizer", "Use manure", "Avoid cold sowing"],
+    "severity": "medium",
+    "confidence_notes": "Purple coloration is a strong sign."
+  },
+
+  "Calcium deficiency (blossom end rot)": {
+    "common_names": ["end rot"],
+    "description": "Calcium shortage in fruiting crops leading to dark sunken spots at fruit ends.",
+    "visual_cues": ["Dark leathery fruit-end spots", "Poor fruit quality"],
+    "likely_cause": "Inconsistent watering causing Ca mobility issues.",
+    "remedies": ["Maintain even watering", "Apply calcium sprays"],
+    "severity": "medium",
+    "confidence_notes": "Fruit-end symptom is definitive."
+  },
+
+  "Zinc deficiency": {
+    "common_names": ["Zn deficiency"],
+    "description": "Micronutrient disorder causing small leaves and rosetting.",
+    "visual_cues": ["Short internodes", "Small leaves", "Interveinal chlorosis"],
+    "likely_cause": "Low Zn soil levels.",
+    "remedies": ["Apply zinc sulfate", "Adjust soil pH"],
+    "severity": "low",
+    "confidence_notes": "Rosetting is a strong indicator."
+  },
+
+  "Salt stress / salinity injury": {
+    "common_names": ["salinity stress"],
+    "description": "Salt buildup causing leaf burn and poor growth.",
+    "visual_cues": ["Leaf tip burn", "Salt crust on soil", "Stunted growth"],
+    "likely_cause": "Irrigation with saline water or poor drainage.",
+    "remedies": ["Leach salts with clean water", "Improve drainage", "Use salt-tolerant varieties"],
+    "severity": "medium",
+    "confidence_notes": "Soil crust often confirms cause."
+  }
+}
+
